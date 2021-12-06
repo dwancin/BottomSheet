@@ -3,7 +3,7 @@
 ## example:
 ```` 
  struct ContentView: View {
-    @State private var isPresented = false*
+    @State private var isPresented = false
     
     var body: some View {
         NavigationView {
