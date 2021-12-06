@@ -1,6 +1,7 @@
 # BottomSheet
 
 ## example:
+```` 
  struct ContentView: View {
     @State private var isPresented = false*
     
@@ -23,3 +24,4 @@
         .navigationViewStyle(.stack)
     }
 }
+```` 
