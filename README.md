@@ -1,5 +1,5 @@
 # Bottom Sheet
-A customizable sheet for SwiftUI. 
+**A customizable sheet for SwiftUI.** 
 *Choose between medium and large, select background, set corner radius and optional display of the indicator.*
 
 ## Download
