@@ -1,4 +1,4 @@
-# BottomSheet
+# Bottom Sheet
 A customizable sheet for SwiftUI. Choose between medium and large, select background, set corner radius and optional display of the indicator.
 
 ## Download
@@ -13,7 +13,7 @@ A customizable sheet for SwiftUI. Choose between medium and large, select backgr
 
 
 
-## example:
+## Example Of Use
 ```` 
  struct ContentView: View {
     @State private var isPresented = false
