@@ -29,7 +29,7 @@ A customizable sheet for SwiftUI. Choose between medium and large, select backgr
             
             .bottomSheet(isPresented: $isPresented, indicator: true, background: .white, size: "medium", radius: 25) {
                 Text("Hello World!")
-            
+            }
         
             .navigationTitle("BottomSheet")
             .navigationBarTitleDisplayMode(.large)
