@@ -4,7 +4,7 @@
 
 ## Download
 - Open your **Swift** project in **Xcode**
-- File -> Add Packages
+- Click on **File** -> **Add Packages**
 - Enter `https://github.com/dwancin/BottomView` for the package repository URL
 - Select **Branch**: master
 - **Done! 👌**
