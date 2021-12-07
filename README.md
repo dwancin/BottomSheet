@@ -6,7 +6,10 @@
 - Select your project
 - Enter `https://github.com/dwancin/BottomView` for the package repository URL
 - Select **Branch**: master
-- Click **Done 👌**
+- Click **Finish**
+- **Done! 👌**
+
+
 
 
 ## example:
