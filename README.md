@@ -1,5 +1,14 @@
 # BottomSheet
 
+## Download
+
+- File -> Swift Packages -> Add Package Dependency...
+- Select your project
+- Enter `https://github.com/dwancin/BottomView` for the package repository URL
+- Select **Branch**: master
+- Click **Done 👌**
+
+
 ## example:
 ```` 
  struct ContentView: View {
