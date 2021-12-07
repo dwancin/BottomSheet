@@ -87,6 +87,7 @@ final class BottomSheetViewController<Content: View>: UIHostingController<Conten
             view.layer.cornerRadius = CGFloat(Int(radius))
             view.backgroundColor = UIColor(background)
             
+            @Environment(\.presentationMode) var presentationMode
             
             if size == "medium" {
                 presentationController.detents = [.medium()]
