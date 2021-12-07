@@ -2,7 +2,7 @@
 **A customizable sheet for SwiftUI.** 
 *Choose between medium and large, select background, set corner radius and optional display of the indicator.*
 
-## Download
+## How To Install
 - Open your **Swift** project in **Xcode**
 - Click on **File** -> **Add Packages**
 - Enter `https://github.com/dwancin/BottomView` for the package repository URL
@@ -12,8 +12,11 @@
 
 
 
-## Example Of Use
+## How To Use
 ```` 
+import SwiftUI
+import BottomSheet
+
  struct ContentView: View {
     @State private var isPresented = false
     
