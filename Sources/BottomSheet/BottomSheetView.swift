@@ -15,7 +15,6 @@ import SwiftUI
 @available(iOS 15.0, *)
 struct BottomSheetView<Content: View>: UIViewControllerRepresentable {
     
-    @AppStorage("isDarkMode") private var isDark = false
     @Binding var isPresented: Bool
     @ViewBuilder let content: Content
     let indicator: Bool
@@ -70,6 +69,8 @@ final class BottomSheetViewController<Content: View>: UIHostingController<Conten
     private let background: Color
     private let size: String
     private let radius: Int
+    
+    @AppStorage("isDarkMode") private var isDark = false
     
     init(rootView: Content, showIndicator: Bool, background: Color, size: String, radius: Int) {
         self.indicator = showIndicator
