@@ -69,8 +69,7 @@ final class BottomSheetViewController<Content: View>: UIHostingController<Conten
     private let background: Color
     private let size: String
     private let radius: Int
-    
-    @AppStorage("isDarkMode") private var isDark = false
+
     
     init(rootView: Content, showIndicator: Bool, background: Color, size: String, radius: Int) {
         self.indicator = showIndicator
@@ -89,9 +88,6 @@ final class BottomSheetViewController<Content: View>: UIHostingController<Conten
             view.layer.cornerRadius = CGFloat(Int(radius))
             view.backgroundColor = UIColor(background)
             
-            @Environment(\.presentationMode) var presentationMode
-            .environment(\.colorScheme, isDark ? .dark : .light)
-            .preferredColorScheme(isDark ? .dark : .light)
             
             
             if size == "medium" {
