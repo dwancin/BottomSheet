@@ -15,6 +15,7 @@ import SwiftUI
 @available(iOS 15.0, *)
 struct BottomSheetView<Content: View>: UIViewControllerRepresentable {
     
+    @AppStorage("isDarkMode") private var isDark = false
     @Binding var isPresented: Bool
     @ViewBuilder let content: Content
     let indicator: Bool
@@ -88,6 +89,9 @@ final class BottomSheetViewController<Content: View>: UIHostingController<Conten
             view.backgroundColor = UIColor(background)
             
             @Environment(\.presentationMode) var presentationMode
+            .environment(\.colorScheme, isDark ? .dark : .light)
+            .preferredColorScheme(isDark ? .dark : .light)
+            
             
             if size == "medium" {
                 presentationController.detents = [.medium()]
