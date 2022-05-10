@@ -2,17 +2,16 @@
 **A customizable sheet for SwiftUI.** 
 *Choose between medium and large, select background, set corner radius and optional display of the indicator.*
 
-## How To Install
-- Open your **Swift** project in **Xcode**
-- Click on **File** -> **Add Packages**
-- Enter `https://github.com/dwancin/BottomView` for the package repository URL
-- Select **Branch**: master
-- **Done! 👌**
+## Install
+- Open your project in **Xcode**
+- Go to **Add Packages**
+- Enter the **package repository URL** 
+`https://github.com/dwancin/BottomView`
 
 
 
 
-## How To Use
+## Example
 ```` 
 import SwiftUI
 import BottomSheet
