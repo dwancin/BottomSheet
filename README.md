@@ -12,6 +12,8 @@
 
 
 ## Example
+
+### ContentView
 ```` 
 import SwiftUI
 import BottomSheet
