@@ -1,5 +1,5 @@
 # Bottom Sheet
-**A customizable sheet for SwiftUI.** 
+**Customizable sheet for SwiftUI.** 
 
 ## Install
 - Open a project in **Xcode**
