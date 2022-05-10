@@ -13,26 +13,17 @@
 
 ## Example
 
-### ContentView.swift
+### Code
 ```` 
-import SwiftUI
-import BottomSheet
-
-struct ContentView: View {
-@State private var isPresented = false 
-struct ContentView: View {
-@State private var showSheet = false
-
-var body: some View {
-NavigationView {
-Text("show sheet")
-.onTapGesture(perform: {showSheet.toggle()}) 
-}
-.bottomSheet(isPresented: $isPresented, prefersGrabberVisible: true, prefersEdgeAttachedInCompactHeight: true, widthFollowsPreferredContentSizeWhenEdgeAttached: true, prefersScrollingExpandsWhenScrolledToEdge: true, preferredCornerRadius: 23, detents: [.medium(), .large()]) {
-Text("hide sheet")
-.onTapGesture(perform: {showSheet.toggle()})
-}
-}
-.navigationViewStyle(.stack)
-}
+.bottomSheet(isPresented: $isPresented, 
+             prefersGrabberVisible: true, 
+             prefersEdgeAttachedInCompactHeight: true, 
+             widthFollowsPreferredContentSizeWhenEdgeAttached: true, 
+             prefersScrollingExpandsWhenScrolledToEdge: true, 
+             preferredCornerRadius: 23, 
+             detents: [.medium(), .large()]) {
+  
+             Text("This text appears inside the sheet.")
+                                              
+             }
 ```` 
