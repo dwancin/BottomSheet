@@ -11,7 +11,7 @@
 
 
 ## Usage
-#### properties
+### Properties
 - **isPresented** *This controls whether the sheet is hidden or shown'.*
 - **prefersGrabberVisible** *Set to 'true' to show a grabber at the top of the sheet.*
 - **prefersEdgeAttachedInCompactHeight** *Set to 'true' to show a grabber at the top of the sheet.*
