@@ -28,7 +28,7 @@ NavigationView {
 Text("show sheet")
 .onTapGesture(perform: {showSheet.toggle()}) 
 }
-.bottomSheet(isPresented: $showSheet, prefersGrabberVisible: true, prefersEdgeAttachedInCompactHeight: true, widthFollowsPreferredContentSizeWhenEdgeAttached: true, prefersScrollingExpandsWhenScrolledToEdge: true, preferredCornerRadius: 23, detents: [.medium(), .large()]) {
+.bottomSheet(isPresented: $isPresented, prefersGrabberVisible: true, prefersEdgeAttachedInCompactHeight: true, widthFollowsPreferredContentSizeWhenEdgeAttached: true, prefersScrollingExpandsWhenScrolledToEdge: true, preferredCornerRadius: 23, detents: [.medium(), .large()]) {
 Text("hide sheet")
 .onTapGesture(perform: {showSheet.toggle()})
 }
