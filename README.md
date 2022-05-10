@@ -19,7 +19,7 @@
 - **prefersScrollingExpandsWhenScrolledToEdge** *If there is a larger detent to expand to than the selected detent, and a descendent scroll view is scrolled to top, this controls whether scrolling down will expand to a larger detent.*
 - **preferredCornerRadius** *The preferred corner radius of the sheet when presented.*
 
-### Example
+#### Example
 ```` 
 .bottomSheet(
       isPresented: $isPresented, 
