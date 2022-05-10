@@ -1,10 +1,7 @@
-//
-//  BottomSheet
-//
-//  Created by @dwancin
-//  Copyright (c) Daniel Ialcin Misser Westergaard. All rights reserved.
-//
-//
+//***************************************
+//**  Created by @dwancin              **
+//**  Daniel Ialcin Misser Westergaard **
+//***************************************
 
 
 import XCTest
