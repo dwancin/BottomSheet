@@ -10,9 +10,16 @@
 
 
 
-## Example
+## Usage
+#### properties
+- **isPresented** *This controls whether the sheet is hidden or shown'.*
+- **prefersGrabberVisible** *Set to 'true' to show a grabber at the top of the sheet.*
+- **prefersEdgeAttachedInCompactHeight** *Set to 'true' to show a grabber at the top of the sheet.*
+- **widthFollowsPreferredContentSizeWhenEdgeAttached** *Set to 'true' to allow preferredContentSize to influence the width of the sheet when edge-attached.*
+- **prefersScrollingExpandsWhenScrolledToEdge** *If there is a larger detent to expand to than the selected detent, and a descendent scroll view is scrolled to top, this controls whether scrolling down will expand to a larger detent.*
+- **preferredCornerRadius** *The preferred corner radius of the sheet when presented.*
 
-### Code
+### Example
 ```` 
 .bottomSheet(
       isPresented: $isPresented, 
@@ -26,11 +33,3 @@
       Text("This text appears inside the sheet.")                           
       }
 ````
-
-### Options
-- **isPresented** *This controls whether the sheet is hidden or shown'.*
-- **prefersGrabberVisible** *Set to 'true' to show a grabber at the top of the sheet.*
-- **prefersEdgeAttachedInCompactHeight** *Set to 'true' to show a grabber at the top of the sheet.*
-- **widthFollowsPreferredContentSizeWhenEdgeAttached** *Set to 'true' to allow preferredContentSize to influence the width of the sheet when edge-attached.*
-- **prefersScrollingExpandsWhenScrolledToEdge** *If there is a larger detent to expand to than the selected detent, and a descendent scroll view is scrolled to top, this controls whether scrolling down will expand to a larger detent.*
-- **preferredCornerRadius** *The preferred corner radius of the sheet when presented.*
