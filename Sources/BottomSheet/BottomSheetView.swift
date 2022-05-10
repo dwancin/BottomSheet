@@ -1,13 +1,9 @@
-//
-//  BottomSheet
-//  
-//  Created by @dwancin
-//  Copyright (c) Daniel Ialcin Misser Westergaard. All rights reserved.
-//
-//
+//***************************************
+//**  Created by @dwancin              **
+//**  Daniel Ialcin Misser Westergaard **
+//***************************************
 
 
-import Foundation
 import UIKit
 import SwiftUI
 
@@ -16,13 +12,13 @@ import SwiftUI
 struct BottomSheetView<Content: View>: UIViewControllerRepresentable {
     
     @Binding var isPresented: Bool
+    let prefersGrabberVisible: Bool
+    let prefersEdgeAttachedInCompactHeight: Bool
+    let widthFollowsPreferredContentSizeWhenEdgeAttached: Bool
+    let prefersScrollingExpandsWhenScrolledToEdge: Bool
+    let preferredCornerRadius: CGFloat
+    let detents: [UISheetPresentationController.Detent]
     @ViewBuilder let content: Content
-    let indicator: Bool
-    let background: Color
-    let onDismiss: (() -> Void)?
-    let size: String
-    let radius: Int
-    
     
     
     func makeCoordinator() -> Coordinator {
@@ -31,19 +27,20 @@ struct BottomSheetView<Content: View>: UIViewControllerRepresentable {
     
     func makeUIViewController(context: Context) -> UIViewController {
         let controller = UIViewController()
-        controller.view.backgroundColor = .clear
-        
         return controller
     }
     
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
         if isPresented {
-            let sheetController = BottomSheetViewController(rootView: content, showIndicator: indicator, background: background, size: size, radius: radius)
+            
+            let sheetController = BottomSheetController(rootView: content, prefersGrabberVisible: prefersGrabberVisible, prefersEdgeAttachedInCompactHeight: prefersEdgeAttachedInCompactHeight, widthFollowsPreferredContentSizeWhenEdgeAttached: widthFollowsPreferredContentSizeWhenEdgeAttached, prefersScrollingExpandsWhenScrolledToEdge: prefersScrollingExpandsWhenScrolledToEdge, preferredCornerRadius: preferredCornerRadius, detents: detents)
+            
             sheetController.presentationController?.delegate = context.coordinator
             DispatchQueue.main.async {
                 uiViewController.present(sheetController, animated: true)
                 isPresented.toggle()
             }
+            
         }
     }
     
@@ -55,50 +52,7 @@ struct BottomSheetView<Content: View>: UIViewControllerRepresentable {
             self.parent = parent
         }
         
-        func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-            parent.onDismiss?()
-        }
+        
+        
     }
 }
-
-
-@available(iOS 15.0, *)
-final class BottomSheetViewController<Content: View>: UIHostingController<Content> {
-    
-    private let indicator: Bool
-    private let background: Color
-    private let size: String
-    private let radius: Int
-
-    
-    init(rootView: Content, showIndicator: Bool, background: Color, size: String, radius: Int) {
-        self.indicator = showIndicator
-        self.background = background
-        self.size = size
-        self.radius = radius
-        super.init(rootView: rootView)
-    }
-    
-    @MainActor @objc required dynamic init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        if let presentationController = presentationController as? UISheetPresentationController {
-            view.layer.cornerRadius = CGFloat(Int(radius))
-            view.backgroundColor = UIColor(background)
-            
-            
-            
-            if size == "medium" {
-                presentationController.detents = [.medium()]
-            } else if size == "large" {
-                presentationController.detents = [.large()]
-            } else {
-                presentationController.detents = [.large(), .medium()]
-            }
-            presentationController.prefersGrabberVisible = indicator
-        }
-    }
-}
-
