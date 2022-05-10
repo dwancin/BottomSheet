@@ -20,23 +20,20 @@ import BottomSheet
  struct ContentView: View {
     @State private var isPresented = false
     
+    struct ContentView: View {
+    @State private var showSheet = false
     var body: some View {
+        
         NavigationView {
-            Form {
-                   Section {
-                   Button("present sheet", action: {
-                       isPresented.toggle() })
-                   }
-               }
-            
-            .bottomSheet(isPresented: $isPresented, indicator: true, background: .white, size: "medium", radius: 25) {
-                Text("Hello World!")
+            Text("show sheet")
+           .onTapGesture(perform: { showSheet.toggle()})
             }
         
-            .navigationTitle("BottomSheet")
-            .navigationBarTitleDisplayMode(.large)
+            .bottomSheet(isPresented: $showSheet, prefersGrabberVisible: true, prefersEdgeAttachedInCompactHeight: true, widthFollowsPreferredContentSizeWhenEdgeAttached: true, prefersScrollingExpandsWhenScrolledToEdge: true, preferredCornerRadius: 23, detents: [.medium(), .large()]) {
+                Text("hide sheet")
+               .onTapGesture(perform: { showSheet.toggle()})
+            }
         }
         .navigationViewStyle(.stack)
     }
-}
 ```` 
