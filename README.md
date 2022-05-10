@@ -34,3 +34,4 @@
       Text("This text appears inside the sheet.")                           
       }
 ````
+![preview image](http://preview.png)
