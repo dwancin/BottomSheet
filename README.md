@@ -22,8 +22,6 @@
              prefersScrollingExpandsWhenScrolledToEdge: true, 
              preferredCornerRadius: 23, 
              detents: [.medium(), .large()]) {
-  
-             Text("This text appears inside the sheet.")
-                                              
+             Text("This text appears inside the sheet.")                           
              }
 ```` 
