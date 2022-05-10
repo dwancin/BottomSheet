@@ -15,13 +15,15 @@
 
 ### Code
 ```` 
-.bottomSheet(isPresented: $isPresented, 
-             prefersGrabberVisible: true, 
-             prefersEdgeAttachedInCompactHeight: true, 
-             widthFollowsPreferredContentSizeWhenEdgeAttached: true, 
-             prefersScrollingExpandsWhenScrolledToEdge: true, 
-             preferredCornerRadius: 23, 
-             detents: [.medium(), .large()]) {
-             Text("This text appears inside the sheet.")                           
-             }
-```` 
+.bottomSheet(
+      isPresented: $isPresented, 
+      prefersGrabberVisible: true, 
+      prefersEdgeAttachedInCompactHeight: true, 
+      widthFollowsPreferredContentSizeWhenEdgeAttached: true, 
+      prefersScrollingExpandsWhenScrolledToEdge: true, 
+      preferredCornerRadius: 23, 
+      detents: [.medium(), .large()]) 
+      {
+      Text("This text appears inside the sheet.")                           
+      }
+````
