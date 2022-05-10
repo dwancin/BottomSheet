@@ -3,7 +3,7 @@
 *Choose between medium and large, select background, set corner radius and optional display of the indicator.*
 
 ## Install
-- Open your project in **Xcode**
+- Open a project in **Xcode**
 - Go to **Add Packages**
 - Enter the **package repository URL** 
 `https://github.com/dwancin/BottomView`
