@@ -5,7 +5,7 @@
 - Open a project in **Xcode**
 - Go to **Add Packages**
 - Enter the **package repository URL** 
-`https://github.com/dwancin/BottomView`
+`https://github.com/dwancin/BottomSheet.git`
 
 
 
