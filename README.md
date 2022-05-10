@@ -12,7 +12,8 @@
 
 ## Usage
 ### Properties
-- **isPresented** *This controls whether the sheet is hidden or shown'.*
+- **isPresented** *This controls whether the sheet is hidden or shown.*
+- **detents** *The array of detents that the sheet may rest at.*
 - **prefersGrabberVisible** *Set to 'true' to show a grabber at the top of the sheet.*
 - **prefersEdgeAttachedInCompactHeight** *Set to 'true' to show a grabber at the top of the sheet.*
 - **widthFollowsPreferredContentSizeWhenEdgeAttached** *Set to 'true' to allow preferredContentSize to influence the width of the sheet when edge-attached.*
