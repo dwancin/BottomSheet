@@ -34,4 +34,4 @@
       Text("This text appears inside the sheet.")                           
       }
 ````
-![preview image](http://preview.png)
+![preview image](https://github.com/dwancin/BottomSheet/blob/main/Tests/BottomSheetTests/preview.png?raw=true)
