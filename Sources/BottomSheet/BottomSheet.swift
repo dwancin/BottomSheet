@@ -1,21 +1,16 @@
-//
-//  BottomSheet
-//
-//  Created by @dwancin
-//  Copyright (c) Daniel Ialcin Misser Westergaard. All rights reserved.
-//
-//
+//***************************************
+//**  Created by @dwancin              **
+//**  Daniel Ialcin Misser Westergaard **
+//***************************************
 
 
 import SwiftUI
 import UIKit
-import Foundation
-
 
 @available(iOS 15.0, *)
 public extension View {
-    func bottomSheet<Content: View>(isPresented: Binding<Bool>, indicator: Bool = true, background: Color, onDismiss: (() -> Void)? = nil, size: String, radius: Int, @ViewBuilder content: @escaping () -> Content) -> some View {
+    func bottomSheet<Content: View>(isPresented: Binding<Bool>, prefersGrabberVisible: Bool, prefersEdgeAttachedInCompactHeight: Bool, widthFollowsPreferredContentSizeWhenEdgeAttached: Bool, prefersScrollingExpandsWhenScrolledToEdge: Bool, preferredCornerRadius: CGFloat, detents: [UISheetPresentationController.Detent], @ViewBuilder content: @escaping () -> Content) -> some View {
         self
-            .background(BottomSheetView(isPresented: isPresented, content: content, indicator: indicator, background: background, onDismiss: onDismiss, size: size, radius: radius))
+            .background(BottomSheetView(isPresented: isPresented, prefersGrabberVisible: prefersGrabberVisible, prefersEdgeAttachedInCompactHeight: prefersEdgeAttachedInCompactHeight, widthFollowsPreferredContentSizeWhenEdgeAttached: widthFollowsPreferredContentSizeWhenEdgeAttached, prefersScrollingExpandsWhenScrolledToEdge: prefersScrollingExpandsWhenScrolledToEdge, preferredCornerRadius: preferredCornerRadius, detents: detents, content: content))
     }
 }
