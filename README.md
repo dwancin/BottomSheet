@@ -13,7 +13,7 @@
 
 ## Example
 
-### ContentView
+### ContentView.swift
 ```` 
 import SwiftUI
 import BottomSheet
